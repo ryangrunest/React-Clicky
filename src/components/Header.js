@@ -1,8 +1,12 @@
 import React from "react";
+import './Header.css';
 
 function Header() {
   return (
-    <h1>This is the header</h1>
+    <div className="container">
+      <h1 className="left">Clicky Game</h1>
+      <h1 className="right">A React Game</h1>
+    </div>
   )
 }
 

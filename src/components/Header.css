@@ -1,0 +1,28 @@
+.container {
+  height: 17vh;
+  width: 100vw;
+  align-items: center;
+  background-color: blue;
+  color: white;
+}
+.left {
+  flex: 1;
+  padding-left: 5vh;
+}
+.right {
+  flex: 1;
+  text-align: right;
+  padding-right: 5vh;
+}
+.fab .fa-react  {
+  color: white;
+  animation: roll 3s infinite;
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
