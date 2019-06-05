@@ -1,0 +1,10 @@
+.image {
+  min-width: 15%;
+  height: auto;
+  margin: 3vh;
+  transition: box-shadow 0.2s;
+}
+.image:hover {
+  box-shadow: 3px 3px 15px blue;
+  cursor: pointer;
+}
