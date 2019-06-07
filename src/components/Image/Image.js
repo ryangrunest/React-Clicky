@@ -5,19 +5,13 @@ class Image extends React.Component {
   state =  {
     isClicked: false
   }
-
   checkIfClicked = () => {
-    if (this.state.isClicked === false) {
-      alert('clicked');
-      this.setState({
-        isClicked: true,
-      })
-    }
-    
+    console.log('clicked')
+    if ( this.state.isClicked === false ) {
+      this.setState({  isClicked: true })
+    } else { alert('you lost :(') }
   }
-  // () => this.props.clickEvent(this.props.id)
   render() {
-    console.log(this.state.isClicked)
       return <img className="image" src={this.props.id} alt="game of thrones" onClick={this.checkIfClicked}/>
   }
 }
