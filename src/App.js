@@ -23,20 +23,19 @@ class App extends Component {
     totalGuessed: 0,
     highestCount: 0
   }
-  loadCards = () => {
-    const newState = { ...this.state };
-  }
   checkCard = (id) => {
-    console.log('clicked'+ id);
     this.setState({
       pickedCards: {
         ...this.state.pickedCards,
         [id]:  (this.state.pickedCards[id] || 0) + 1,
-      }
+      },
+      totalGuessed: this.state.totalGuessed + 1
     });
-  }
+    // this.setState({ totalGuessed: this.totalGuessed + 1 })
+  };
   render() {
     console.log(this.state.pickedCards);
+    console.log(this.state.totalGuessed);
     return (
     <div>
       <Header />
