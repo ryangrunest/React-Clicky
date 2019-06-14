@@ -21,18 +21,17 @@ class Main extends React.Component {
   }
   checkIfClicked = async (e) => {
     console.log(e.target.id);
-const newArr = await this.state.cards.map(card => {
-    if(e.target.id == card.id)  {
-      return {
-        id: card.id,
-        img:card.img,
-        isClicked: true
-      }
-    } else {
-      return  card
-    }
-  
-})
+    const newArr = await this.state.cards.map(card => {
+        if(e.target.id == card.id)  {
+          return {
+            id: card.id,
+            img:card.img,
+            isClicked: true
+          }
+        } else {
+          return  card
+        }
+    })
    this.setState({
      cards:newArr
    })
@@ -41,6 +40,7 @@ const newArr = await this.state.cards.map(card => {
   getImage = () => {
     return this.state.cards[Math.floor(Math.random() * this.state.cards.length)];
   };
+  
   render() {
     return (
       <div className='main-content'>
